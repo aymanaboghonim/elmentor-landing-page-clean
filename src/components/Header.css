@@ -1,0 +1,255 @@
+/* Header Styles for DevOps Visions Landing Page */
+.elmentor-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: var(--transition-all);
+  background: var(--color-white);
+  box-shadow: none;
+}
+
+.elmentor-header.scrolled {
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.elmentor-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-family: var(--font-family-body);
+  position: relative;
+}
+
+/* Desktop: Full width navigation - fill entire screen */
+@media (min-width: 1281px) {
+  .elmentor-nav {
+    max-width: none;
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-4xl);
+  }
+}
+
+.elmentor-logo-link {
+  display: flex;
+  align-items: center;
+  min-width: 48px;
+  text-decoration: none;
+}
+
+.elmentor-logo-text {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  transition: var(--transition-all);
+}
+
+.elmentor-logo-link:hover .elmentor-logo-text {
+  color: var(--color-primary-hover);
+}
+
+.elmentor-nav-links {
+  display: flex;
+  gap: var(--spacing-xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.elmentor-nav-links a {
+  color: var(--color-gray-800);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-all);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-bottom: 2px solid transparent;
+  letter-spacing: 0.2px;
+}
+
+.elmentor-header.scrolled .elmentor-nav-links a {
+  color: var(--color-gray-800);
+}
+
+.elmentor-nav-links a:hover,
+.elmentor-nav-links a:focus {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  outline: none;
+}
+
+.elmentor-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.elmentor-lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--color-gray-700);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  transition: var(--transition-all);
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+}
+
+.elmentor-header.scrolled .lang-btn {
+  color: var(--color-gray-700);
+}
+
+.lang-btn.active {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  background: var(--color-primary-light);
+}
+
+.lang-btn:hover,
+.lang-btn:focus {
+  color: var(--color-primary);
+  background: var(--color-gray-100);
+  outline: none;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 20px;
+  height: 2px;
+  background: var(--color-gray-800);
+  transition: all 0.3s ease;
+  margin: 2px 0;
+  transform-origin: center;
+}
+
+.mobile-menu-btn.open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.mobile-menu-btn.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  margin: 0;
+  padding: var(--spacing-md) 0;
+}
+
+.mobile-nav-links li {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.mobile-nav-links li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-links a {
+  display: block;
+  color: var(--color-gray-800);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-md) var(--spacing-lg);
+  transition: var(--transition-all);
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a:focus {
+  background: var(--color-gray-100);
+  color: var(--color-primary);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Mobile Styles */
+@media (max-width: 900px) {
+  .elmentor-nav {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .elmentor-nav-links {
+    display: none;
+  }
+  
+  .elmentor-logo-text {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 600px) {
+  .elmentor-nav {
+    padding: var(--spacing-sm);
+  }
+  
+  .elmentor-logo-text {
+    font-size: var(--font-size-base);
+  }
+}

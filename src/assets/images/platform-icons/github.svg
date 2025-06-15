@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="githubGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#333;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="64" height="64" rx="8" fill="url(#githubGradient)"/>
+  
+  <!-- GitHub Octocat -->
+  <circle cx="32" cy="28" r="16" fill="white"/>
+  <circle cx="28" cy="24" r="2" fill="#333"/>
+  <circle cx="36" cy="24" r="2" fill="#333"/>
+  <path d="M32 32 Q30 34 32 36 Q34 34 32 32" fill="#333"/>
+  
+  <!-- Tentacles -->
+  <path d="M16 38 Q14 40 12 44 Q10 48 14 50" stroke="white" stroke-width="3" fill="none"/>
+  <path d="M48 38 Q50 40 52 44 Q54 48 50 50" stroke="white" stroke-width="3" fill="none"/>
+</svg>

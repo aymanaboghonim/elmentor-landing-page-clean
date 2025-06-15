@@ -1,0 +1,315 @@
+/* About Section Styles - Updated with Design System */
+.about-section {
+  background: var(--color-gray-50);
+  padding: var(--spacing-4xl) 0 var(--spacing-3xl) 0;
+  border-top: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid var(--color-gray-200);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background pattern */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(var(--color-primary-100) 1px, transparent 1px),
+    radial-gradient(var(--color-primary-100) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.4;
+}
+
+.about-container {
+  max-width: 1140px; /* Increased for better layout of 3 cards */
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.about-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-2xl);
+  text-align: center;
+  font-family: var(--font-family-heading);
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-title.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--color-primary);
+  margin: var(--spacing-sm) auto 0;
+  border-radius: 2px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-block {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 0; /* Padding moved to inner container */
+  margin-bottom: 0;
+  border: 1px solid var(--color-gray-100);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  height: 100%; /* Ensure equal height */
+}
+
+.about-block[data-animation-delay="0"] {
+  transition-delay: 0ms;
+}
+
+.about-block[data-animation-delay="200"] {
+  transition-delay: 200ms;
+}
+
+.about-block[data-animation-delay="400"] {
+  transition-delay: 400ms;
+}
+
+.about-block.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-block:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+  border-color: var(--color-primary-200);
+}
+
+.about-block-inner {
+  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-subtitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-family-heading);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-primary-100);
+  padding-bottom: var(--spacing-sm);
+}
+
+.about-list {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+  color: var(--color-gray-800);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  font-family: var(--font-family-body);
+  flex: 1; /* Make the list fill the remaining space */
+}
+
+.about-list li {
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+.about-list li::marker {
+  color: var(--color-primary);
+}
+
+.about-list li:last-child {
+  margin-bottom: 0;
+}
+
+.about-key {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.about-key a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+  position: relative;
+}
+
+.about-key a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-primary-hover);
+  transition: width 0.3s ease;
+}
+
+.about-key a:hover {
+  color: var(--color-primary-hover);
+}
+
+.about-key a:hover::after {
+  width: 100%;
+}
+
+.about-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: var(--spacing-xs);
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.pulse-icon {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.about-body {
+  color: var(--color-gray-700);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Call to Action Section */
+.about-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-gray-200);
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: 600ms;
+}
+
+.about-cta.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .about-container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .about-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .about-subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .about-block-inner {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .about-cta {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+  }
+  
+  .about-cta .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Slower animations on mobile for better performance */
+  .about-block {
+    transition: all 0.5s ease;
+  }
+  
+  /* Adjust list spacing on mobile */
+  .about-list {
+    padding-left: var(--spacing-md);
+  }
+}
+
+@media (min-width: 800px) {
+  .about-content {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+  
+  .about-block {
+    flex: 1 1 0;
+    min-width: 0;
+    margin-bottom: 0;
+    display: flex;
+  }
+  
+  /* Stagger animations more clearly on desktop */
+  .about-block[data-animation-delay="0"] {
+    transition-delay: 100ms;
+  }
+  
+  .about-block[data-animation-delay="200"] {
+    transition-delay: 300ms;
+  }
+  
+  .about-block[data-animation-delay="400"] {
+    transition-delay: 500ms;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: var(--spacing-2xl) 0 var(--spacing-xl) 0;
+  }
+  .about-title {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+  .about-block {
+    padding: 16px 10px 12px 10px;
+  }
+}

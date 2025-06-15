@@ -1,0 +1,137 @@
+/* This file should be deleted - CSS is in src/styles/AboutSection.css */
+
+.about__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.about__block {
+  background: var(--color-surface);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about__block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+.about__subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.about__icon {
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about__list li {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.about__list li::before {
+  content: '•';
+  color: var(--color-primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.about__key {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about__key a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about__key a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* RTL Support */
+.about-section.rtl {
+  direction: rtl;
+}
+
+.about-section.rtl .about__list li {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+.about-section.rtl .about__list li::before {
+  left: auto;
+  right: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3rem 0;
+  }
+
+  .about__container {
+    padding: 0 1rem;
+  }
+
+  .about__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about__block {
+    padding: 1.5rem;
+  }
+
+  .about__subtitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__title {
+    font-size: 1.8rem;
+  }
+
+  .about__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about__block {
+    padding: 1rem;
+  }
+}

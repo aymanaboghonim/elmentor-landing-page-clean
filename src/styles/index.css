@@ -1,0 +1,282 @@
+/* CSS Reset and Base Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-800);
+  background-color: var(--color-white);
+}
+
+/* CSS Variables for Design System */
+:root {  /* Microsoft Design System Colors */
+  --color-primary: #0078D4; /* Microsoft Blue */
+  --color-primary-hover: #106EBE;
+  --color-primary-light: #DEECF9;
+  
+  /* Primary color shades */
+  --color-primary-50: #EFF6FC;
+  --color-primary-100: #DEECF9;
+  --color-primary-200: #C7E0F4;
+  --color-primary-300: #71AFE5;
+  --color-primary-400: #2B88D8;
+  --color-primary-500: #0078D4; /* Base color */
+  --color-primary-600: #106EBE;
+  --color-primary-700: #005A9E;
+  --color-primary-800: #004578;
+  --color-primary-900: #002C52;
+  --color-primary-950: #001526;
+  
+  --color-secondary: #605E5C; /* Microsoft Gray */
+  --color-secondary-light: #F3F2F1;
+  --color-accent: #2B88D8; /* Microsoft accent blue */
+  --color-success: #107C10; /* Microsoft Green */
+  --color-warning: #FFB900; /* Microsoft Yellow */
+  --color-error: #D83B01; /* Microsoft Red/Orange */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray-50: #FAF9F8;
+  --color-gray-100: #F3F2F1;
+  --color-gray-200: #EDEBE9;
+  --color-gray-300: #E1DFDD;
+  --color-gray-400: #C8C6C4;
+  --color-gray-500: #A19F9D;
+  --color-gray-600: #605E5C;
+  --color-gray-700: #484644;
+  --color-gray-800: #323130;
+  --color-gray-900: #201F1E;
+
+  /* Typography - Microsoft Design System */
+  --font-family-sans: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  --font-family-mono: 'Cascadia Code', 'Segoe UI Mono', Consolas, 'Courier New', monospace;
+  --font-family-heading: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  --font-family-body: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+
+  /* Legacy color variables for compatibility */
+  --primary-color: var(--color-primary);
+  --primary-dark: var(--color-primary-hover);
+  --primary-light: var(--color-primary-light);
+  --secondary-color: var(--color-secondary);
+  --accent-color: var(--color-accent);
+  --text-primary: var(--color-gray-800);
+  --text-secondary: var(--color-gray-600);
+  --text-light: var(--color-gray-500);
+  --background-primary: var(--color-white);
+  --background-secondary: var(--color-gray-50);
+  --background-dark: var(--color-gray-900);
+  --border-color: var(--color-gray-200);
+  --border-focus: var(--color-primary);
+  
+  /* Microsoft Design System Shadows */
+  --shadow-sm: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+  --shadow-md: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.22), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+  --shadow-xl: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+  
+  /* Spacing (8px grid) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 96px;
+
+  /* Layout */
+  --container-max-width: 1200px;
+  
+  /* Typography */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+  --font-size-5xl: 48px;
+  --font-size-6xl: 60px;
+
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-base: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --border-radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-all: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-colors: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  
+  /* Container */
+  --container-padding: 1rem;
+}
+
+/* Utility Classes */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-lg);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-lg {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 0.75rem;
+  }
+  
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+  
+  .btn-lg {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-base);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-light: #9ca3af;
+    --background-primary: #1f2937;
+    --background-secondary: #374151;
+    --background-dark: #111827;
+    --border-color: #374151;
+  }
+  
+  body {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}

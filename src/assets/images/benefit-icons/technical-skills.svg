@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="skillsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#skillsGradient)"/>
+  
+  <!-- Code Symbol -->
+  <path d="M20 32 L16 28 L20 24 M44 32 L48 28 L44 24" stroke="white" stroke-width="3" fill="none"/>
+  <line x1="28" y1="20" x2="36" y2="44" stroke="white" stroke-width="3"/>
+  
+  <!-- Skill Bars -->
+  <rect x="18" y="46" width="12" height="2" fill="white"/>
+  <rect x="18" y="49" width="16" height="2" fill="white"/>
+  <rect x="18" y="52" width="10" height="2" fill="white"/>
+</svg>

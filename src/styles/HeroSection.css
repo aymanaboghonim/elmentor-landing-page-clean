@@ -1,0 +1,244 @@
+/* Hero Section Styles for Elmentor Landing Page */
+/* Updated to use design system tokens and improved accessibility */
+
+.elmentor-hero {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary-950) 0%, var(--color-primary-900) 100%);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: var(--spacing-4xl) var(--spacing-lg) var(--spacing-3xl) var(--spacing-lg);
+  box-sizing: border-box;
+  overflow: hidden;
+  will-change: opacity, transform; /* Optimizes for animations */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Add subtle pattern overlay */
+.elmentor-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 25px 25px;
+  z-index: 1;
+}
+
+/* Additional radial glow effect */
+.elmentor-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 40%, rgba(0, 120, 212, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 1;
+}
+
+.elmentor-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.elmentor-hero-title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.75rem, 4vw, 3rem); /* Responsive font size */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-lg);
+  animation: slideInDown 0.6s ease-out;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.elmentor-hero-slogan {
+  display: block;
+  font-size: clamp(1.25rem, 3vw, 1.75rem); /* Responsive font size */
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-200);
+  margin-top: var(--spacing-sm);
+  animation: fadeIn 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+.elmentor-hero-subhead {
+  font-family: var(--font-family-body);
+  font-size: clamp(1rem, 2.5vw, 1.25rem); /* Responsive font size */
+  font-weight: var(--font-weight-normal);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-2xl);
+  line-height: 1.6;
+  animation: slideInUp 0.6s ease-out 0.2s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+.elmentor-hero-quote {
+  font-style: italic;
+  color: var(--color-primary-200);
+  font-weight: var(--font-weight-medium);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Button Container */
+.hero-cta-container {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: fadeIn 0.8s ease-out 0.4s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+/* Wave divider at bottom of hero section */
+.elmentor-hero-wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.elmentor-hero-wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+.elmentor-hero-wave-shape {
+  fill: var(--color-white);
+}
+
+/* Legacy CTA styles (if still needed) */
+.elmentor-hero-cta {
+  display: inline-block;
+  background: #FF9800;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0.85rem 2.25rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.elmentor-hero-cta:hover,
+.elmentor-hero-cta:focus {
+  background: #e07c00;
+  box-shadow: 0 4px 16px rgba(26,35,126,0.12);
+  outline: none;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .elmentor-hero {
+    padding: var(--spacing-3xl) var(--spacing-md) var(--spacing-xl) var(--spacing-md);
+  }
+  
+  .hero-cta-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .hero-cta-container .btn {
+    width: 100%;
+  }
+    .elmentor-hero-wave-divider svg {
+    height: 40px;
+  }
+}
+
+/* Responsive Design - Mobile First */
+@media (max-width: 767px) {
+  .elmentor-hero {
+    min-height: 60vh;
+    padding: var(--spacing-2xl) var(--spacing-sm) var(--spacing-xl) var(--spacing-sm);
+  }
+  
+  .elmentor-hero-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .elmentor-hero-slogan {
+    font-size: var(--font-size-lg);
+  }
+  
+  .elmentor-hero-subhead {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .hero-cta-container {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .elmentor-hero-cta {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elmentor-hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .elmentor-hero-subhead {
+    font-size: var(--font-size-lg);
+  }
+}

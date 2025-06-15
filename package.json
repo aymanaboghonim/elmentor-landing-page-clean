@@ -1,0 +1,38 @@
+{
+  "name": "elmentor-landing-page-clean",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Clean, maintainable landing page for Elmentor/DevOps Visions community",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write .",
+    "serve": "vite preview --port 3000",
+    "typecheck": "tsc --noEmit",
+    "deploy": "powershell -ExecutionPolicy Bypass -File ./deploy-github-pages.ps1",
+    "deploy:silent": "powershell -ExecutionPolicy Bypass -File ./auto-deploy-silent.ps1",
+    "deploy:auto": "powershell -ExecutionPolicy Bypass -File ./auto-deploy-silent.ps1"
+  },
+  "dependencies": {
+    "framer-motion": "^10.16.0",
+    "lucide-react": "^0.263.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "prettier": "^3.0.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}
