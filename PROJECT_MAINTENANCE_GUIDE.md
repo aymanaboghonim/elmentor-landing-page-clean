@@ -1,6 +1,6 @@
 # Project Maintenance Quick Reference
 
-This document provides a quick reference for maintaining and extending the Elmentor/DevOps Visions landing page implementation.
+This document provides a quick reference for maintaining and extending the aymanaboghonim/DevOps Visions landing page implementation.
 
 ## Project Structure
 
@@ -8,7 +8,7 @@ This document provides a quick reference for maintaining and extending the Elmen
 elmentor-landing-page-clean/
 ├── public/                      # Public static assets
 │   ├── gatherings/             # Community gathering images
-│   └── elmentor-circles.png    # Circles diagram
+│   └── aymanaboghonim-circles.png    # Circles diagram
 ├── src/
 │   ├── assets/                 # Project assets
 │   │   └── images/             # Image assets

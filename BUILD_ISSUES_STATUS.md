@@ -12,7 +12,7 @@
   - `tokyo-2022.svg`, `cairo-2023.svg`, `seattle-2023.svg` for gatherings
   - `founder-mohamed-radwan.svg` instead of JPG version
   - `DevOps-Visions.svg` logo variations
-  - `elmentor-circles.svg` diagram
+  - `aymanaboghonim-circles.svg` diagram
 
 ### 3. Component Path Updates
 - Updated component file references to use the SVG versions:

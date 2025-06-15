@@ -18,6 +18,7 @@ import CommunityGatheringSection from './components/sections/CommunityGatheringS
 import Footer from './components/Footer'
 import './styles/Header.css'
 import './styles/ScrollProgress.css'
+import './styles/BackgroundStyles.css'
 import './styles/index.css'
 
 function App() {

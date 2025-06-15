@@ -1,6 +1,6 @@
 # Next Steps After Implementation
 
-Congratulations on successfully implementing the Elmentor/DevOps Visions landing page! This document outlines the immediate next steps to take for deployment, verification, and further enhancements.
+Congratulations on successfully implementing the aymanaboghonim/DevOps Visions landing page! This document outlines the immediate next steps to take for deployment, verification, and further enhancements.
 
 ## 1. GitHub Pages Deployment (Fully Automated)
 
@@ -16,7 +16,7 @@ For a completely hands-off experience with no user interaction:
 ```
 
 This single command will:
-- Create a GitHub repository automatically (default username: "elmentor")
+- Create a GitHub repository automatically (default username: "aymanaboghonim")
 - Update all configuration files
 - Commit and push code to GitHub
 - Build and deploy to GitHub Pages
@@ -42,7 +42,7 @@ After pushing to GitHub (using either Option 1 or 2):
 
 For detailed instructions on all options, see `AUTOMATED_DEPLOYMENT_OPTIONS.md`.
 
-The site will be available at: `https://elmentor.github.io/elmentor-landing-page-clean/`
+The site will be available at: `https://aymanaboghonim.github.io/elmentor-landing-page-clean/`
 
 ## 2. Post-Deployment Verification
 

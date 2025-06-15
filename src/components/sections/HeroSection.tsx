@@ -12,10 +12,9 @@ export default function HeroSection() {
     <section className="elmentor-hero" id="hero" ref={heroRef}>
       {/* Background pattern overlay is handled by CSS */}
       <div className="elmentor-hero-overlay"></div>
-      
-      <div className="elmentor-hero-content">
+        <div className="elmentor-hero-content">
         <h1 className="elmentor-hero-title">
-          Join DevOps Visions: A Global Community for Continuous Learning and Professional Growth.<br />
+          Join Elmentor Program: A Private Community for Continuous Learning and Professional Growth.<br />
           <span className="elmentor-hero-slogan">Empower through mentorship.</span>
         </h1>
         
@@ -29,9 +28,9 @@ export default function HeroSection() {
             variant="primary" 
             size="lg"
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            ariaLabel="Explore our community sections"
+            ariaLabel="Explore the Elmentor Program"
           >
-            Explore Our Community
+            Explore Elmentor Program
           </Button>
           
           <Button 

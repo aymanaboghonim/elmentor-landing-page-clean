@@ -7,9 +7,8 @@ const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
-        <h2 className="contact-section-title">Get in Touch</h2>
-        <p className="contact-section-subtitle">
-          Ready to connect with our community? We'd love to hear from you!
+        <h2 className="contact-section-title">Get in Touch</h2>        <p className="contact-section-subtitle">
+          Ready to connect with the Elmentor Program? We'd love to hear from you!
         </p>
         
         <div className="contact-info-box">

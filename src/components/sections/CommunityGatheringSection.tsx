@@ -3,26 +3,25 @@ import '../../styles/CommunityGatheringSection.css';
 import { FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 
 // Community gathering data
-const COMMUNITY_GATHERINGS = [  {
-    id: 'japan2022',
+const COMMUNITY_GATHERINGS = [  {    id: 'japan2022',
     title: 'Japan/Tokyo Nov 2022',
     location: 'Tokyo, Japan',
     date: 'November 2022',
-    image: '/gatherings/tokyo-2022.svg'
+    image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/jap-nov-23.jpg'
   },
   {
     id: 'egypt2023',
     title: 'Egypt/Cairo Feb 2023',
     location: 'Cairo, Egypt',
     date: 'February 2023',
-    image: '/gatherings/cairo-2023.svg'
+    image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/eg-2-23.jpg'
   },
   {
     id: 'usa2023',
     title: 'USA/Seattle April 2023',
     location: 'Seattle, USA',
     date: 'April 2023',
-    image: '/gatherings/seattle-2023.svg'
+    image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/usa-apr-23.jpg'
   }
 ];
 
@@ -65,9 +64,8 @@ const CommunityGatheringSection: React.FC = () => {
           ))}
         </div>
         
-        <div className="gathering-join-cta">
-          <p>Want to join our next gathering or organize one in your city?</p>
-          <a href="https://www.facebook.com/mohamedradwan.me" className="messenger-button" target="_blank" rel="noopener noreferrer">
+        <div className="gathering-join-cta">          <p>Want to join our next gathering or organize one in your city?</p>
+          <a href="https://www.facebook.com/mradwandevops" className="messenger-button" target="_blank" rel="noopener noreferrer">
             Message Eng Mohamed Radwan on Facebook
           </a>
         </div>

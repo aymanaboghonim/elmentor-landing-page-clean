@@ -1,4 +1,4 @@
-# Performance Optimization Guide for Elmentor/DevOps Visions Landing Page
+# Performance Optimization Guide for aymanaboghonim/DevOps Visions Landing Page
 
 This guide provides detailed information about the performance optimizations implemented in the project and recommendations for further improvements.
 
@@ -214,6 +214,6 @@ Implement these optimizations in the following order:
 
 ## Conclusion
 
-The Elmentor/DevOps Visions landing page already implements several key performance optimizations. Following the recommendations in this guide will further enhance performance, particularly for users on mobile devices or slow connections.
+The aymanaboghonim/DevOps Visions landing page already implements several key performance optimizations. Following the recommendations in this guide will further enhance performance, particularly for users on mobile devices or slow connections.
 
 Remember that performance optimization is an ongoing process. Regularly measure and evaluate to ensure the site remains fast as new features and content are added.

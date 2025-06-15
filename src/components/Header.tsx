@@ -1,29 +1,32 @@
 import { useState, useEffect } from 'react';
 import '../styles/Header.css';
-import logoImage from '../assets/images/elmentor-logo.svg';
+import logoImage from '../assets/images/elmentor-logo.png';
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
-  { label: 'Circles', href: '#circles' },
-  { label: 'Activities', href: '#activities' },
-  { label: 'Founder', href: '#founder' },
-  { label: 'Benefits', href: '#benefits' },
-  { label: 'News', href: '#news' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '#hero', id: 'hero' },
+  { label: 'About', href: '#about', id: 'about' },
+  { label: 'Circles', href: '#circles', id: 'circles' },
+  { label: 'Activities', href: '#activities', id: 'activities' },
+  { label: 'Founder', href: '#founder', id: 'founder' },
+  { label: 'Benefits', href: '#benefits', id: 'benefits' },
+  { label: 'News', href: '#news', id: 'news' },
+  { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 
 const MOBILE_BREAKPOINT = 900;
 
-export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
+export default function Header() {  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= MOBILE_BREAKPOINT);
 
   useEffect(() => {
+    // Initial check for scroll position
+    setScrolled(window.scrollY > 50);
+    
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+    
     const handleResize = () => {
       const mobile = window.innerWidth <= MOBILE_BREAKPOINT;
       setIsMobile(mobile);
@@ -31,8 +34,10 @@ export default function Header() {
         setMenuOpen(false);
       }
     };
+    
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
@@ -56,16 +61,35 @@ export default function Header() {
       document.body.classList.remove('mobile-menu-open');
     }
   }, [menuOpen]);
-
   const handleMenuToggle = () => setMenuOpen((open) => !open);
   const closeMenu = () => setMenuOpen(false);
+  
+  // Function to handle section navigation and prevent default behavior
+  const handleSectionNavigation = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    closeMenu();
+    
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      
+      // Update URL without triggering navigation
+      const newUrl = window.location.pathname + window.location.search + '#' + sectionId;
+      window.history.replaceState(null, '', newUrl);
+    }
+  };
 
   return (
-    <header className={`elmentor-header${scrolled ? ' scrolled' : ''}`}>      <nav className="elmentor-nav" aria-label="Main Navigation">        <a href="#home" className="elmentor-logo-link" tabIndex={0}>
+    <header className={`elmentor-header${scrolled ? ' scrolled' : ''}`}>      <nav className="elmentor-nav" aria-label="Main Navigation">        <a 
+          href="#hero" 
+          className="elmentor-logo-link" 
+          tabIndex={0}
+          onClick={(e) => handleSectionNavigation(e, 'hero')}
+        >
           <img 
             src={logoImage}
-            alt="DevOps Visions Logo" 
-            className="header-logo-image"
+            alt="Elmentor Program Logo" 
+            className="elmentor-logo"
           />
         </a>
         {isMobile && (
@@ -82,20 +106,22 @@ export default function Header() {
           </button>
         )}
         {!isMobile && (
-          <>
-            <ul className="elmentor-nav-links">
+          <>            <ul className="elmentor-nav-links">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} tabIndex={0} onClick={closeMenu}>
+                  <a 
+                    href={link.href} 
+                    tabIndex={0} 
+                    onClick={(e) => handleSectionNavigation(e, link.id)}
+                  >
                     {link.label}
                   </a>
                 </li>
               ))}
-            </ul>
-            <div className="elmentor-lang-switcher" role="group" aria-label="Language Switcher">
-              <a href="./index.html" className="lang-btn active" tabIndex={0}>English</a>
+            </ul><div className="elmentor-lang-switcher" role="group" aria-label="Language Switcher">
+              <a href="#/" className="lang-btn active" tabIndex={0}>English</a>
               <span className="lang-divider">|</span>
-              <a href="./arabic.html" className="lang-btn" tabIndex={0}>العربية</a>
+              <a href="#/arabic" className="lang-btn" tabIndex={0}>العربية</a>
             </div>
           </>
         )}
@@ -107,20 +133,22 @@ export default function Header() {
           role="dialog"
           aria-modal="true"
           tabIndex={-1}
-        >
-          <ul>
+        >          <ul>
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a href={link.href} tabIndex={0} onClick={closeMenu}>
+                <a 
+                  href={link.href} 
+                  tabIndex={0} 
+                  onClick={(e) => handleSectionNavigation(e, link.id)}
+                >
                   {link.label}
                 </a>
               </li>
             ))}
-          </ul>
-          <div className="elmentor-lang-switcher-mobile" role="group" aria-label="Language Switcher">
-            <a href="./index.html" className="lang-btn active" tabIndex={0}>EN</a>
+          </ul><div className="elmentor-lang-switcher-mobile" role="group" aria-label="Language Switcher">
+            <a href="#/" className="lang-btn active" tabIndex={0}>EN</a>
             <span className="lang-divider">|</span>
-            <a href="./arabic.html" className="lang-btn" tabIndex={0}>ع</a>
+            <a href="#/arabic" className="lang-btn" tabIndex={0}>ع</a>
           </div>
         </div>
       )}

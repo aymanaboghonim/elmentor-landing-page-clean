@@ -1,8 +1,27 @@
 /* News Section Styles */
 .news-section {
   padding: var(--spacing-4xl) 0;
-  background: var(--color-white);
+  /* Using unified background styles - primary section */
+  background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-primary-50) 100%);
+  position: relative;
   border-top: 1px solid var(--color-gray-200);
+}
+
+/* Subtle background pattern */
+.news-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(var(--color-primary-100) 1px, transparent 1px),
+    radial-gradient(var(--color-primary-100) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .news-container {
@@ -25,8 +44,47 @@
   color: var(--color-gray-700);
   text-align: center;
   max-width: 600px;
-  margin: 0 auto var(--spacing-4xl) auto;
+  margin: 0 auto var(--spacing-lg) auto;
   line-height: var(--line-height-relaxed);
+}
+
+/* Archive Year Selector */
+.news-archive-selector {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+  flex-wrap: wrap;
+}
+
+.archive-year-btn {
+  background: var(--color-gray-100);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+  cursor: pointer;
+  transition: var(--transition-all);
+}
+
+.archive-year-btn:hover {
+  background: var(--color-gray-200);
+  color: var(--color-gray-900);
+}
+
+.archive-year-btn.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.no-news-message {
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+  color: var(--color-gray-600);
+  font-size: var(--font-size-base);
 }
 
 /* Loading and Error States */
@@ -217,6 +275,16 @@
   .news-meta {
     align-items: flex-start;
     text-align: left;
+  }
+
+  .news-archive-selector {
+    gap: var(--spacing-xs);
+    padding: 0 var(--spacing-md);
+  }
+
+  .archive-year-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
   }
 }
 

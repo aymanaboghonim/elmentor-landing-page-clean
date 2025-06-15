@@ -1,7 +1,7 @@
 # GitHub repository setup and deployment with no user interaction
-$GithubUsername = "elmentor"
+$GithubUsername = "aymanaboghonim"
 $RepoName = "elmentor-landing-page-clean"
-$Description = "Clean, maintainable implementation of the Elmentor/DevOps Visions landing page"
+$Description = "Clean, maintainable implementation of the aymanaboghonim/DevOps Visions landing page"
 
 # Start log file
 $logFile = "github_setup.log"

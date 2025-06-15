@@ -1,6 +1,6 @@
 # Automated Deployment Options
 
-This document outlines the various automated deployment options available for the Elmentor/DevOps Visions landing page.
+This document outlines the various automated deployment options available for the aymanaboghonim/DevOps Visions landing page.
 
 ## Option 1: Fully Automated Silent Mode
 
@@ -12,7 +12,7 @@ For a completely hands-off deployment experience with no user interaction:
 ```
 
 What it does:
-- Creates GitHub repository automatically (uses default username "elmentor")
+- Creates GitHub repository automatically (uses default username "aymanaboghonim")
 - Updates all configuration files with correct repository information
 - Commits and pushes code to GitHub
 - Builds the project and deploys to GitHub Pages

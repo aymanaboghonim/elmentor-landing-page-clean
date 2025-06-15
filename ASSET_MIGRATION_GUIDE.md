@@ -1,12 +1,12 @@
 # Asset Migration Guide
 
-This guide provides instructions for migrating all assets from the original Elmentor/DevOps Visions project to the new, clean implementation.
+This guide provides instructions for migrating all assets from the original aymanaboghonim/DevOps Visions project to the new, clean implementation.
 
 ## Current Asset Status
 
 The clean implementation currently includes professional-quality placeholder assets:
 
-- **SVG Logos**: Placeholder SVG versions of the Elmentor and DevOps Visions logos
+- **SVG Logos**: Placeholder SVG versions of the aymanaboghonim and DevOps Visions logos
 - **Founder Image**: Professional-looking placeholder for Mohamed Radwan's image
 - **Circles Diagram**: SVG placeholder representing the six-level hierarchy diagram
 - **Gathering Images**: Sample images for Tokyo, Cairo, and Seattle gatherings
@@ -20,7 +20,7 @@ We've provided multiple scripts to automatically copy the real assets from the o
 ```powershell
 # File: copy-assets.ps1
 
-$sourceProject = "d:\Github_personal\elmentor-landing-page"
+$sourceProject = "d:\Github_personal\aymanaboghonim-landing-page"
 $destProject = "d:\Github_personal\elmentor-landing-page-clean"
 
 # Create directories if they don't exist
@@ -28,14 +28,14 @@ New-Item -ItemType Directory -Force -Path "$destProject\src\assets\images"
 New-Item -ItemType Directory -Force -Path "$destProject\public\gatherings"
 
 # Copy logo files
-Copy-Item "$sourceProject\src\assets\images\elmentor-logo.svg" -Destination "$destProject\src\assets\images\" -Force
+Copy-Item "$sourceProject\src\assets\images\aymanaboghonim-logo.svg" -Destination "$destProject\src\assets\images\" -Force
 Copy-Item "$sourceProject\src\assets\images\founder-mohamed-radwan.jpg" -Destination "$destProject\src\assets\images\" -Force
 
 # Copy gathering images
 Copy-Item "$sourceProject\public\gatherings\*.jpg" -Destination "$destProject\public\gatherings\" -Force
 
 # Copy circles diagram
-Copy-Item "$sourceProject\public\elmentor-circles.png" -Destination "$destProject\public\" -Force
+Copy-Item "$sourceProject\public\aymanaboghonim-circles.png" -Destination "$destProject\public\" -Force
 
 Write-Output "Assets copied successfully!"
 ```
@@ -46,7 +46,7 @@ Write-Output "Assets copied successfully!"
 @echo off
 REM File: copy-assets.bat
 
-set SOURCE_PROJECT=d:\Github_personal\elmentor-landing-page
+set SOURCE_PROJECT=d:\Github_personal\aymanaboghonim-landing-page
 set DEST_PROJECT=d:\Github_personal\elmentor-landing-page-clean
 
 REM Create directories if they don't exist
@@ -54,14 +54,14 @@ mkdir "%DEST_PROJECT%\src\assets\images" 2>nul
 mkdir "%DEST_PROJECT%\public\gatherings" 2>nul
 
 REM Copy logo files
-copy /Y "%SOURCE_PROJECT%\src\assets\images\elmentor-logo.svg" "%DEST_PROJECT%\src\assets\images\"
+copy /Y "%SOURCE_PROJECT%\src\assets\images\aymanaboghonim-logo.svg" "%DEST_PROJECT%\src\assets\images\"
 copy /Y "%SOURCE_PROJECT%\src\assets\images\founder-mohamed-radwan.jpg" "%DEST_PROJECT%\src\assets\images\"
 
 REM Copy gathering images
 copy /Y "%SOURCE_PROJECT%\public\gatherings\*.jpg" "%DEST_PROJECT%\public\gatherings\"
 
 REM Copy circles diagram
-copy /Y "%SOURCE_PROJECT%\public\elmentor-circles.png" "%DEST_PROJECT%\public\"
+copy /Y "%SOURCE_PROJECT%\public\aymanaboghonim-circles.png" "%DEST_PROJECT%\public\"
 
 echo Assets copied successfully!
 ```
@@ -74,7 +74,7 @@ echo Assets copied successfully!
 const fs = require('fs');
 const path = require('path');
 
-const sourceProject = 'd:/Github_personal/elmentor-landing-page';
+const sourceProject = 'd:/Github_personal/aymanaboghonim-landing-page';
 const destProject = 'd:/Github_personal/elmentor-landing-page-clean';
 
 // Create directories if they don't exist
@@ -91,8 +91,8 @@ directories.forEach(dir => {
 
 // Copy logo files
 fs.copyFileSync(
-  path.join(sourceProject, 'src', 'assets', 'images', 'elmentor-logo.svg'),
-  path.join(destProject, 'src', 'assets', 'images', 'elmentor-logo.svg')
+  path.join(sourceProject, 'src', 'assets', 'images', 'aymanaboghonim-logo.svg'),
+  path.join(destProject, 'src', 'assets', 'images', 'aymanaboghonim-logo.svg')
 );
 
 fs.copyFileSync(
@@ -102,8 +102,8 @@ fs.copyFileSync(
 
 // Copy circles diagram
 fs.copyFileSync(
-  path.join(sourceProject, 'public', 'elmentor-circles.png'),
-  path.join(destProject, 'public', 'elmentor-circles.png')
+  path.join(sourceProject, 'public', 'aymanaboghonim-circles.png'),
+  path.join(destProject, 'public', 'aymanaboghonim-circles.png')
 );
 
 // Copy gathering images
@@ -129,7 +129,7 @@ import os
 import shutil
 from pathlib import Path
 
-source_project = Path("d:/Github_personal/elmentor-landing-page")
+source_project = Path("d:/Github_personal/aymanaboghonim-landing-page")
 dest_project = Path("d:/Github_personal/elmentor-landing-page-clean")
 
 # Create directories if they don't exist
@@ -138,8 +138,8 @@ dest_project = Path("d:/Github_personal/elmentor-landing-page-clean")
 
 # Copy logo files
 shutil.copy2(
-    source_project / "src" / "assets" / "images" / "elmentor-logo.svg",
-    dest_project / "src" / "assets" / "images" / "elmentor-logo.svg"
+    source_project / "src" / "assets" / "images" / "aymanaboghonim-logo.svg",
+    dest_project / "src" / "assets" / "images" / "aymanaboghonim-logo.svg"
 )
 
 shutil.copy2(
@@ -149,8 +149,8 @@ shutil.copy2(
 
 # Copy circles diagram
 shutil.copy2(
-    source_project / "public" / "elmentor-circles.png",
-    dest_project / "public" / "elmentor-circles.png"
+    source_project / "public" / "aymanaboghonim-circles.png",
+    dest_project / "public" / "aymanaboghonim-circles.png"
 )
 
 # Copy gathering images
@@ -167,7 +167,7 @@ print("Assets copied successfully!")
 @echo off
 REM File: EXECUTE-ASSET-COPY.bat
 
-echo Elmentor/DevOps Visions Asset Migration Tool
+echo aymanaboghonim/DevOps Visions Asset Migration Tool
 echo ============================================
 echo.
 echo This script will copy all assets from the original project to the clean implementation.
@@ -197,19 +197,19 @@ pause
 If the scripts don't work for any reason, you can manually copy these assets:
 
 1. **Logo Files**:
-   - Source: `elmentor-landing-page/src/assets/images/elmentor-logo.svg`
-   - Destination: `elmentor-landing-page-clean/src/assets/images/elmentor-logo.svg`
+   - Source: `aymanaboghonim-landing-page/src/assets/images/aymanaboghonim-logo.svg`
+   - Destination: `elmentor-landing-page-clean/src/assets/images/aymanaboghonim-logo.svg`
 
 2. **Founder Image**:
-   - Source: `elmentor-landing-page/src/assets/images/founder-mohamed-radwan.jpg`
+   - Source: `aymanaboghonim-landing-page/src/assets/images/founder-mohamed-radwan.jpg`
    - Destination: `elmentor-landing-page-clean/src/assets/images/founder-mohamed-radwan.jpg`
 
 3. **Circles Diagram**:
-   - Source: `elmentor-landing-page/public/elmentor-circles.png`
-   - Destination: `elmentor-landing-page-clean/public/elmentor-circles.png`
+   - Source: `aymanaboghonim-landing-page/public/aymanaboghonim-circles.png`
+   - Destination: `elmentor-landing-page-clean/public/aymanaboghonim-circles.png`
 
 4. **Gathering Images**:
-   - Source: `elmentor-landing-page/public/gatherings/*.jpg`
+   - Source: `aymanaboghonim-landing-page/public/gatherings/*.jpg`
    - Destination: `elmentor-landing-page-clean/public/gatherings/`
 
 ## Asset Verification After Migration

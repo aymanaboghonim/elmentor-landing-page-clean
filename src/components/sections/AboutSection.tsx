@@ -46,9 +46,8 @@ const AboutSection: React.FC = () => {
   
   return (
     <section className="about-section" id="about" ref={sectionRef}>
-      <div className="about-container">
-        <h2 className="about-title" ref={titleRef}>
-          About the DevOps Visions Program
+      <div className="about-container">        <h2 className="about-title" ref={titleRef}>
+          About the Elmentor Program
         </h2>
         
         <div className="about-content">
@@ -58,12 +57,12 @@ const AboutSection: React.FC = () => {
             ref={el => blockRefs.current[0] = el}
             data-animation-delay="0"
           >
-            <div className="about-block-inner">
-              <h3 className="about-subtitle">
+            <div className="about-block-inner">              <h3 className="about-subtitle">
                 <FaLightbulb className="about-icon pulse-icon" aria-hidden="true" /> 
                 Mission & Core Values
               </h3>
               <ul className="about-list">
+                <li>Elmentor Program is a private community operated by DevOps Visions professional services.</li>
                 <li>Empowering tech professionals through dedicated mentorship and collaborative knowledge sharing.</li>
                 <li>Fostering a transparent, inclusive, and supportive community environment.</li>
                 <li>Encouraging continuous learning, professional growth, and the pursuit of excellence.</li>
@@ -133,11 +132,10 @@ const AboutSection: React.FC = () => {
             ariaLabel="Join the DevOps Visions community"
           >
             Join Our Community
-          </Button>
-          <Button 
+          </Button>          <Button 
             variant="ghost" 
             size="lg"
-            onClick={() => window.open('https://github.com/DevOpsVisions', '_blank')}
+            onClick={() => window.open('https://github.com/ElmentorProgram', '_blank')}
             ariaLabel="View our GitHub organization"
             icon={<FaGithub />}
           >

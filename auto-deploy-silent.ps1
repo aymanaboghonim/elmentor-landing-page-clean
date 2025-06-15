@@ -2,13 +2,13 @@
 # Silent GitHub repository automation script
 param(
     [Parameter(Mandatory=$false)]
-    [string]$GithubUsername = "elmentor", # Default username set to "elmentor"
+    [string]$GithubUsername = "aymanaboghonim", # Default username - REPLACE WITH YOUR USERNAME
     
     [Parameter(Mandatory=$false)]
     [string]$RepoName = "elmentor-landing-page-clean",
     
     [Parameter(Mandatory=$false)]
-    [string]$Description = "Clean, maintainable implementation of the Elmentor/DevOps Visions landing page",
+    [string]$Description = "Clean, maintainable implementation of the aymanaboghonim/DevOps Visions landing page",
     
     [Parameter(Mandatory=$false)]
     [switch]$Silent = $true

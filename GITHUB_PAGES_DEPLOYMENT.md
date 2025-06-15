@@ -1,6 +1,6 @@
 # GitHub Pages Deployment Guide
 
-This document provides step-by-step instructions for deploying the Elmentor/DevOps Visions landing page to GitHub Pages.
+This document provides step-by-step instructions for deploying the aymanaboghonim/DevOps Visions landing page to GitHub Pages.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Use our automated script to set up your GitHub repository and update all necessa
 .\setup-github-repo.bat
 
 # Or run the PowerShell script directly (replace with your GitHub username)
-.\setup-github-repo.ps1 -GithubUsername "yourusername"
+.\setup-github-repo.ps1 -GithubUsername "aymanaboghonim"
 ```
 
 This script will:
@@ -64,7 +64,7 @@ Double-click `deploy-github-pages.bat` or run:
 After deployment completes successfully, your site should be available at:
 
 ```
-https://yourusername.github.io/elmentor-landing-page-clean/
+https://aymanaboghonim.github.io/elmentor-landing-page-clean/
 ```
 
 It may take a few minutes for the changes to propagate.

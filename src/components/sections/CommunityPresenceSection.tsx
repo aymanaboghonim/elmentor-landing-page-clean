@@ -9,31 +9,30 @@ const COMMUNITY_LINKS = [
     name: 'DevOps Visions Community Blog',
     url: 'https://devopsvisions.github.io/',
     icon: <FaBlog />,
-    category: 'DevOps Visions Program Official Channels',
+    category: 'DevOps Visions Public Community',
   },
-  {
-    name: 'DevOps Visions Program GitHub Org',
-    url: 'https://github.com/DevOpsVisions',
+  {    name: 'Elmentor Program GitHub Organization',
+    url: 'https://github.com/ElmentorProgram',
     icon: <FaGithub />,
-    category: 'DevOps Visions Program Official Channels',
+    category: 'DevOps Visions Public Community',
   },
   {
     name: 'DevOps Visions Community YouTube',
     url: 'https://www.youtube.com/@MRadwanArabic',
     icon: <FaYoutube />,
-    category: 'DevOps Visions Program Official Channels',
+    category: 'DevOps Visions Public Community',
   },
   {
     name: 'DevOps Visions Facebook Page',
     url: 'https://www.facebook.com/DevOpsVisions',
     icon: <FaFacebook />,
-    category: 'DevOps Visions Program Official Channels',
+    category: 'DevOps Visions Public Community',
   },
 ];
 
 const ECOSYSTEM_LINKS = [  {
-    name: 'DevOps Visions Public Community GitHub',
-    url: 'https://github.com/DevOpsVisions',
+    name: 'Elmentor Program GitHub',
+    url: 'https://github.com/ElmentorProgram',
     icon: <FaGithub />,
     logo: logoImage,
     category: 'Broader DevOps Visions Ecosystem',
@@ -47,11 +46,9 @@ const CommunityPresenceSection: React.FC = () => {
         <h2 id="community-title" className="community-presence-title">Stay Connected & Engage</h2>
         <p className="community-presence-subtitle">
           Join our vibrant community across various platforms and be part of the conversation.
-        </p>
-
-        <div className="channels-category">
-          <h3 className="category-title">DevOps Visions Program Official Channels</h3>
-          <div className="links-grid" role="list" aria-label="Official DevOps Visions Program social media channels">
+        </p>        <div className="channels-category">
+          <h3 className="category-title">DevOps Visions Public Community</h3>
+          <div className="links-grid" role="list" aria-label="DevOps Visions Public Community social media channels">
             {COMMUNITY_LINKS.map((link) => (
               <a 
                 key={link.name} 
@@ -95,11 +92,10 @@ const CommunityPresenceSection: React.FC = () => {
           <p className="community-cta-text">
             Connect with like-minded professionals, share knowledge, and grow together in our supportive community.
           </p>
-          <div className="community-cta-buttons">
-            <Button 
+          <div className="community-cta-buttons">            <Button 
               variant="primary" 
               size="lg"
-              onClick={() => window.open('https://github.com/DevOpsVisions', '_blank')}
+              onClick={() => window.open('https://github.com/ElmentorProgram', '_blank')}
               aria-label="Join our GitHub community - opens in new tab"
             >
               Join GitHub Community

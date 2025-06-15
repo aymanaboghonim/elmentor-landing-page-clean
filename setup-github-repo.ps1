@@ -8,7 +8,7 @@ param(
     [string]$RepoName = "elmentor-landing-page-clean",
     
     [Parameter(Mandatory=$false)]
-    [string]$Description = "Clean, maintainable implementation of the Elmentor/DevOps Visions landing page"
+    [string]$Description = "Clean, maintainable implementation of the aymanaboghonim/DevOps Visions landing page"
 )
 
 # Function to display colored messages

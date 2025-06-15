@@ -2,47 +2,78 @@ import React, { useState, useEffect } from 'react';
 import '../../styles/NewsSection.css';
 import Button from '../Button';
 
-const NewsSection: React.FC = () => {  const [news, setNews] = useState<any[]>([]);
+const NewsSection: React.FC = () => {
+  const [news, setNews] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, _setError] = useState<string | null>(null);
-
-  // Mock news data with real GitHub-style content
+  const [activeYear, setActiveYear] = useState<string>('all');
+  
+  // Official news data organized by year - only including items with public links
   const mockNews = [
+    // 2025 News
     {
       id: 1,
-      title: "New DevOps Circle Initiative Launching Soon",
-      summary: "We're excited to announce the upcoming launch of our specialized DevOps Circle, focusing on CI/CD, Infrastructure as Code, and cloud automation best practices.",
-      date: "2025-01-15",
-      type: "announcement",
-      source: "El Mentor Program",
-      link: "#circles"
+      title: "GitHub Copilot Workspace From Idea to Implementation",
+      summary: "A session demonstrating how to use GitHub Copilot to implement ideas efficiently, with real use cases and practical examples.",
+      date: "2025-03-15",
+      type: "event",
+      source: "Elmentor Program",
+      link: "https://youtu.be/qFW-G2KH5Nw?si=UyQqk3FJjlM9wIzO",
+      year: "2025"
     },
     {
       id: 2,
-      title: "Community Project: Open Source Mentorship Platform",
-      summary: "Join our latest community project to build an open-source mentorship platform that will help connect mentors and mentees across different technology domains.",
-      date: "2025-01-10",
-      type: "project",
-      source: "GitHub Repository",
-      link: "https://github.com/elmentor-program"
+      title: "Deploying Q2A & WordPress on Azure VM: Hands-On Session",
+      summary: "Practical session on deploying Question2Answer and WordPress platforms on Microsoft Azure Virtual Machines.",
+      date: "2025-02-20",
+      type: "technical",
+      source: "DevOps Visions Public Community",
+      link: "https://youtu.be/GGy0mtGQapU?si=zQIEn2RXDIi7Sz2j",
+      year: "2025"
     },
+    
+    // 2024 News
     {
       id: 3,
-      title: "Monthly Knowledge Session: Cloud Architecture Patterns",
-      summary: "Join Microsoft MVP Mohamed for an in-depth session on modern cloud architecture patterns and best practices for scalable applications.",
-      date: "2025-01-08",
-      type: "event",
-      source: "El Mentor Sessions",
-      link: "#activities"
+      title: "Secret to Success with Sandra Kiel & Waddah Azhary",
+      summary: "Insights on achieving success in the tech industry from Sandra Kiel and Waddah Azhary, with practical advice and career guidance.",
+      date: "2024-11-23",
+      type: "career",
+      source: "Elmentor Program",
+      link: "https://youtu.be/0AZB63DZCcg?si=en-HldnSP5lz03U3",
+      year: "2024"
     },
     {
       id: 4,
-      title: "New Members Welcome: January 2025 Cohort",
-      summary: "We're welcoming 50+ new members to the El Mentor community this month. Learn about our onboarding process and how to get started.",
-      date: "2025-01-05",
+      title: "A Brief Overview of The Mentor Community 2024",
+      summary: "Waddah Azhary provides a comprehensive overview of The Elmentor Program's mission, structure, and benefits.",
+      date: "2024-05-12",
       type: "community",
-      source: "Community Updates",
-      link: "#about"
+      source: "Elmentor Program",
+      link: "https://www.youtube.com/watch?v=zGqUFocNzd4",
+      year: "2024"
+    },
+    
+    // 2023 News
+    {
+      id: 5,
+      title: "Observability & AIOps at Scale with Dynatrace",
+      summary: "Technical session discussing how to implement observability and AIOps practices at enterprise scale using Dynatrace.",
+      date: "2023-09-05",
+      type: "technical",
+      source: "DevOps Visions Public Community",
+      link: "https://www.youtube.com/watch?v=YHSX5_vLR8Q",
+      year: "2023"
+    },
+    {
+      id: 6,
+      title: "GitHub - DevOps All You Need to Know",
+      summary: "Comprehensive overview of GitHub's DevOps capabilities and integration points for modern development workflows.",
+      date: "2023-05-20",
+      type: "event",
+      source: "DevOps Visions Public Community",
+      link: "https://www.youtube.com/watch?v=nD8t6LVBTdE",
+      year: "2023"
     }
   ];
 
@@ -59,6 +90,14 @@ const NewsSection: React.FC = () => {  const [news, setNews] = useState<any[]>([
     fetchNews();
   }, []);
 
+  // Get unique years for archive filtering
+  const availableYears = [...new Set(mockNews.map(item => item.year))].sort((a, b) => b.localeCompare(a));
+
+  // Filter news based on active year
+  const filteredNews = activeYear === 'all' 
+    ? news 
+    : news.filter(item => item.year === activeYear);
+
   const getNewsTypeIcon = (type: string) => {
     switch (type) {
       case 'announcement':
@@ -69,6 +108,10 @@ const NewsSection: React.FC = () => {  const [news, setNews] = useState<any[]>([
         return '📅';
       case 'community':
         return '👥';
+      case 'technical':
+        return '💻';
+      case 'career':
+        return '📈';
       default:
         return '📰';
     }
@@ -118,8 +161,27 @@ const NewsSection: React.FC = () => {  const [news, setNews] = useState<any[]>([
           Stay informed about our latest initiatives, community projects, and upcoming events.
         </p>
 
+        {/* Archive selector */}
+        <div className="news-archive-selector">
+          <button 
+            className={`archive-year-btn ${activeYear === 'all' ? 'active' : ''}`} 
+            onClick={() => setActiveYear('all')}
+          >
+            All
+          </button>
+          {availableYears.map(year => (
+            <button
+              key={year}
+              className={`archive-year-btn ${activeYear === year ? 'active' : ''}`}
+              onClick={() => setActiveYear(year)}
+            >
+              {year}
+            </button>
+          ))}
+        </div>
+
         <div className="news-grid">
-          {news.map((article) => (
+          {filteredNews.map((article) => (
             <article key={article.id} className="news-card">
               <div className="news-header">
                 <span className="news-type-icon" aria-label={`${article.type} news`}>
@@ -139,9 +201,9 @@ const NewsSection: React.FC = () => {  const [news, setNews] = useState<any[]>([
                   variant="secondary"
                   size="sm"
                   onClick={() => {
-                    if (article.link.startsWith('#')) {
+                    if (article.link && article.link.startsWith('#')) {
                       document.querySelector(article.link)?.scrollIntoView({ behavior: 'smooth' });
-                    } else {
+                    } else if (article.link) {
                       window.open(article.link, '_blank', 'noopener,noreferrer');
                     }
                   }}
@@ -154,11 +216,16 @@ const NewsSection: React.FC = () => {  const [news, setNews] = useState<any[]>([
           ))}
         </div>
 
-        <div className="news-cta">
-          <Button
+        {filteredNews.length === 0 && (
+          <div className="no-news-message">
+            <p>No updates available for the selected year.</p>
+          </div>
+        )}
+
+        <div className="news-cta">          <Button
             variant="primary"
             size="lg"
-            onClick={() => window.open('https://github.com/elmentor-program', '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open('https://github.com/ElmentorProgram', '_blank', 'noopener,noreferrer')}
             ariaLabel="Follow our GitHub for more updates"
           >
             Follow on GitHub

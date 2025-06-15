@@ -1,7 +1,7 @@
 # Copy Required Assets from Original Project
 # Run this script from the elmentor-landing-page-clean directory
 
-$originalPath = "d:\Github_personal\elmentor-landing-page"
+$originalPath = "d:\Github_personal\aymanaboghonim-landing-page"
 $cleanPath = "d:\Github_personal\elmentor-landing-page-clean"
 
 Write-Host "Copying required assets from original project..." -ForegroundColor Green
@@ -10,22 +10,22 @@ Write-Host "Copying required assets from original project..." -ForegroundColor G
 $publicPath = Join-Path $cleanPath "public"
 $assetsImagesPath = Join-Path $cleanPath "src\assets\images"
 
-# Copy elmentor-circles.png to public directory
-$sourcePath = Join-Path $originalPath "public\elmentor-circles.png"
-$destPath = Join-Path $publicPath "elmentor-circles.png"
+# Copy aymanaboghonim-circles.png to public directory
+$sourcePath = Join-Path $originalPath "public\aymanaboghonim-circles.png"
+$destPath = Join-Path $publicPath "aymanaboghonim-circles.png"
 if (Test-Path $sourcePath) {
     Copy-Item $sourcePath $destPath -Force
-    Write-Host "✓ Copied elmentor-circles.png to public directory" -ForegroundColor Green
+    Write-Host "✓ Copied aymanaboghonim-circles.png to public directory" -ForegroundColor Green
 } else {
     Write-Host "✗ Source file not found: $sourcePath" -ForegroundColor Red
 }
 
 # Copy logo image
-$sourcePath = Join-Path $originalPath "src\assets\images\elmentor-logo.png"
-$destPath = Join-Path $assetsImagesPath "elmentor-logo.png"
+$sourcePath = Join-Path $originalPath "src\assets\images\aymanaboghonim-logo.png"
+$destPath = Join-Path $assetsImagesPath "aymanaboghonim-logo.png"
 if (Test-Path $sourcePath) {
     Copy-Item $sourcePath $destPath -Force
-    Write-Host "✓ Copied elmentor-logo.png" -ForegroundColor Green
+    Write-Host "✓ Copied aymanaboghonim-logo.png" -ForegroundColor Green
 } else {
     Write-Host "✗ Source file not found: $sourcePath" -ForegroundColor Red
 }

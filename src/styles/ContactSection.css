@@ -1,8 +1,27 @@
 /* Contact Section Styles - Updated with Design System */
 .contact-section {
   padding: var(--spacing-4xl) 0;
-  background-color: var(--color-primary-950);
+  /* Using unified background styles - alternate section */
+  background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-900) 100%);
+  position: relative;
   color: var(--color-white);
+}
+
+/* Subtle background pattern */
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .contact-container {

@@ -90,10 +90,9 @@ const CirclesSection: React.FC = () => {
         <div 
           className={`circles-diagram ${isVisible ? 'animate-scale-in animate-delay-400' : ''}`}
           ref={diagramRef}
-        >
-          <div className="circles-image-wrapper">
+        >          <div className="circles-image-wrapper">
             <img 
-              src="./elmentor-circles.png" 
+              src="./assets/circles/elmentor-circles.png" 
               alt="Elmentor Circles Diagram showing the layered structure from Audience to Executives" 
               className="circles-image"
               loading="lazy"

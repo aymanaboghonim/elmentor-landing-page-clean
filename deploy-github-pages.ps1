@@ -1,5 +1,5 @@
 #!/usr/bin/env pwsh
-# GitHub Pages deployment script for Elmentor Landing Page
+# GitHub Pages deployment script for aymanaboghonim Landing Page
 
 # Abort on errors
 $ErrorActionPreference = "Stop"
@@ -39,11 +39,11 @@ git commit -m "Deploy to GitHub Pages"
 # Force push to the gh-pages branch
 # IMPORTANT: Update the repository URL below with your actual GitHub repository URL
 Write-Host "Pushing to GitHub Pages..." -ForegroundColor Yellow
-$repoUrl = "git@github.com:elmentor/elmentor-landing-page-clean.git"
+$repoUrl = "git@github.com:aymanaboghonim/elmentor-landing-page-clean.git"
 git push -f $repoUrl main:gh-pages
 
 # Return to the project root
 Set-Location -Path $PSScriptRoot
 
 Write-Host "Deployment completed successfully!" -ForegroundColor Green
-Write-Host "Your site should be available at: https://yourusername.github.io/elmentor-landing-page-clean/" -ForegroundColor Cyan
+Write-Host "Your site should be available at: https://aymanaboghonim.github.io/elmentor-landing-page-clean/" -ForegroundColor Cyan

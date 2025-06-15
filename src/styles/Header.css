@@ -5,14 +5,14 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: var(--transition-all);
-  background: var(--color-white); /* Microsoft uses white header */
+  transition: all 0.3s ease;
+  background: linear-gradient(to right, rgba(0, 69, 120, 0.85), rgba(0, 120, 212, 0.85)); /* Professional gradient with brand colors */
   box-shadow: none;
 }
 .elmentor-header.scrolled {
-  background: var(--color-white); /* Microsoft maintains white header on scroll */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.98), rgba(222, 236, 249, 0.98)); /* Subtle branded gradient when scrolled */
   box-shadow: var(--shadow-sm);
-  border-bottom: 1px solid var(--color-gray-200); /* Subtle border per Microsoft's design */
+  border-bottom: 1px solid var(--color-gray-200);
 }
 .elmentor-nav {
   display: flex;
@@ -43,7 +43,7 @@
   height: 40px;
   width: auto;
   min-width: 48px;
-  transition: var(--transition-all);
+  transition: all 0.3s ease;
 }
 
 /* Logo placeholder styling */
@@ -57,7 +57,7 @@
 }
 
 .elmentor-header.scrolled .elmentor-logo {
-  filter: none; /* Microsoft doesn't apply filters to logos on scroll */
+  transform: scale(0.95);
 }
 .elmentor-nav-links {
   display: flex;
@@ -67,17 +67,19 @@
   padding: 0;
 }
 .elmentor-nav-links a {
-  color: var(--color-gray-800); /* Microsoft uses dark gray for nav links */
+  color: var(--color-white); /* Light color for transparent background */
   text-decoration: none;
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium); /* Microsoft uses medium weight for better legibility */
+  font-weight: var(--font-weight-medium);
   transition: var(--transition-all);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-bottom: 2px solid transparent;
-  letter-spacing: 0.2px; /* Microsoft uses slightly increased letter spacing */
+  letter-spacing: 0.2px;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.8); /* Enhanced text shadow for better visibility */
 }
 .elmentor-header.scrolled .elmentor-nav-links a {
-  color: var(--color-gray-800); /* Keep consistent with Microsoft's design */
+  color: var(--color-gray-800); /* Dark color when scrolled */
+  text-shadow: none;
 }
 .elmentor-nav-links a:hover,
 .elmentor-nav-links a:focus {
@@ -94,16 +96,18 @@
 .lang-btn {
   background: none;
   border: none;
-  color: var(--color-gray-700);
+  color: var(--color-white);  
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold); /* Make text bolder */
   cursor: pointer;
   padding: var(--spacing-xs) var(--spacing-sm);
   transition: var(--transition-all);
   text-decoration: none;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.8); /* Enhanced text shadow for better visibility */
 }
 .elmentor-header.scrolled .lang-btn {
-  color: var(--color-gray-700); /* Microsoft maintains consistent text color */
+  color: var(--color-gray-700);
+  text-shadow: none;
 }
 .lang-btn.active {
   color: var(--color-primary);

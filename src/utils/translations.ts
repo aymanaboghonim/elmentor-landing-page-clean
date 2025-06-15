@@ -114,7 +114,7 @@ export const translations: Record<'en' | 'ar', Translations> = {
       ctaSecondary: 'Learn More'
     },
     about: {
-      title: 'About Elmentor',
+      title: 'About aymanaboghonim',
       subtitle: 'DevOps Visions Community',
       description: 'We are a passionate community dedicated to advancing DevOps practices and fostering innovation in the technology landscape.',
       mission: 'Our Mission',
@@ -169,13 +169,13 @@ export const translations: Record<'en' | 'ar', Translations> = {
       followUs: 'Follow Us'
     },
     footer: {
-      description: 'Elmentor DevOps Visions Community - Empowering innovation through collaboration and knowledge sharing.',
+      description: 'aymanaboghonim DevOps Visions Community - Empowering innovation through collaboration and knowledge sharing.',
       quickLinks: 'Quick Links',
       contact: 'Contact',
       followUs: 'Follow Us',
       newsletter: 'Newsletter',
       subscribe: 'Subscribe',
-      copyright: '© 2024 Elmentor DevOps Visions. All rights reserved.'
+      copyright: '© 2024 aymanaboghonim DevOps Visions. All rights reserved.'
     },
     common: {
       loading: 'Loading...',

@@ -1,30 +1,27 @@
 import { useEffect } from 'react';
 
 const SEOMetaTags: React.FC = () => {
-  useEffect(() => {
-    // Update document meta tags
-    document.title = "DevOps Visions - Global Community for Continuous Learning & Professional Growth";
+  useEffect(() => {    // Update document meta tags
+    document.title = "Elmentor Program - A Private Community for Continuous Learning & Professional Growth";
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 
-        'Join DevOps Visions: A global mentorship community for tech professionals. Connect, collaborate, and elevate your DevOps skills with expert guidance and continuous learning opportunities.'
+        'Join Elmentor Program: A private mentorship community operated by DevOps Visions. Connect, collaborate, and elevate your skills with expert guidance and continuous learning opportunities.'
       );
     } else {
       const newMetaDescription = document.createElement('meta');
       newMetaDescription.name = 'description';
-      newMetaDescription.content = 'Join DevOps Visions: A global mentorship community for tech professionals. Connect, collaborate, and elevate your DevOps skills with expert guidance and continuous learning opportunities.';
+      newMetaDescription.content = 'Join Elmentor Program: A private mentorship community operated by DevOps Visions. Connect, collaborate, and elevate your skills with expert guidance and continuous learning opportunities.';
       document.head.appendChild(newMetaDescription);
-    }
-
-    // Add Open Graph meta tags
+    }    // Add Open Graph meta tags
     const ogMetaTags = [
-      { property: 'og:title', content: 'DevOps Visions - Global Community for Professional Growth' },
-      { property: 'og:description', content: 'Join DevOps Visions: A global mentorship community for tech professionals. Connect, collaborate, and elevate your DevOps skills.' },
+      { property: 'og:title', content: 'Elmentor Program - Private Community for Professional Growth' },
+      { property: 'og:description', content: 'Join Elmentor Program: A private mentorship community operated by DevOps Visions. Connect, collaborate, and elevate your skills.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: window.location.href },
-      { property: 'og:site_name', content: 'DevOps Visions' },
+      { property: 'og:site_name', content: 'Elmentor Program' },
       { property: 'og:locale', content: 'en_US' }
     ];
 
@@ -38,13 +35,11 @@ const SEOMetaTags: React.FC = () => {
         newTag.setAttribute('content', content);
         document.head.appendChild(newTag);
       }
-    });
-
-    // Add Twitter Card meta tags
+    });    // Add Twitter Card meta tags
     const twitterMetaTags = [
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'DevOps Visions - Global Community for Professional Growth' },
-      { name: 'twitter:description', content: 'Join DevOps Visions: A global mentorship community for tech professionals.' }
+      { name: 'twitter:title', content: 'Elmentor Program - Private Community for Professional Growth' },
+      { name: 'twitter:description', content: 'Join Elmentor Program: A private mentorship community operated by DevOps Visions.' }
     ];
 
     twitterMetaTags.forEach(({ name, content }) => {

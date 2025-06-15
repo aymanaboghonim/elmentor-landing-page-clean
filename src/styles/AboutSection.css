@@ -1,14 +1,15 @@
 /* About Section Styles - Updated with Design System */
 .about-section {
-  background: var(--color-gray-50);
   padding: var(--spacing-4xl) 0 var(--spacing-3xl) 0;
+  overflow: hidden;
+  /* Using unified background styles - primary section */
+  background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-primary-50) 100%);
+  position: relative;
   border-top: 1px solid var(--color-gray-200);
   border-bottom: 1px solid var(--color-gray-200);
-  position: relative;
-  overflow: hidden;
 }
 
-/* Subtle background pattern */
+/* Subtle background pattern - using styles from BackgroundStyles.css */
 .about-section::before {
   content: '';
   position: absolute;

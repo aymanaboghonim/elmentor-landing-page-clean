@@ -13,7 +13,7 @@ The missing image assets, notably the founder image and circles diagram, have be
 ✅ Added name and title information for context
 
 ### 2. Circles Diagram Enhancement
-✅ Developed a complete SVG visualization of the Elmentor Circles system
+✅ Developed a complete SVG visualization of the aymanaboghonim Circles system
 ✅ Created distinct visual styles for each circle level
 ✅ Added proper labels and descriptions for all 6 circles
 ✅ Ensured hierarchical relationship is clearly visible

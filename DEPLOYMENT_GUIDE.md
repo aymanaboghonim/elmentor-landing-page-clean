@@ -1,6 +1,6 @@
-# Deployment Guide for Elmentor/DevOps Visions Landing Page
+# Deployment Guide for aymanaboghonim/DevOps Visions Landing Page
 
-This document provides comprehensive instructions for deploying the Elmentor/DevOps Visions landing page to various hosting environments.
+This document provides comprehensive instructions for deploying the aymanaboghonim/DevOps Visions landing page to various hosting environments.
 
 ## Prerequisites
 
@@ -111,7 +111,7 @@ az login
 
 ```bash
 az staticwebapp create \
-  --name "elmentor-landing-page" \
+  --name "aymanaboghonim-landing-page" \
   --resource-group "your-resource-group" \
   --source "https://github.com/username/your-repo-name" \
   --branch "main" \
@@ -248,6 +248,6 @@ For future updates:
 
 ## Conclusion
 
-Your Elmentor/DevOps Visions landing page is now ready for deployment. Choose the hosting option that best fits your needs and follow the steps above to make your site live.
+Your aymanaboghonim/DevOps Visions landing page is now ready for deployment. Choose the hosting option that best fits your needs and follow the steps above to make your site live.
 
 For any questions or issues during deployment, refer to the documentation of your chosen hosting provider or review the logs from the deployment process.

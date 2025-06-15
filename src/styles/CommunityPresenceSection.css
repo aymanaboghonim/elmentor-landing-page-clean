@@ -1,7 +1,9 @@
 .community-presence-section {
   padding: var(--spacing-4xl) 0;
+  /* Using unified background styles - secondary section */
   background-color: var(--color-white);
   border-top: 1px solid var(--color-gray-200);
+  position: relative;
 }
 
 .community-presence-container {

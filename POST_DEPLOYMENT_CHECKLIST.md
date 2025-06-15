@@ -1,6 +1,6 @@
 # Post-Deployment Verification Checklist
 
-Use this checklist after deploying the Elmentor/DevOps Visions landing page to verify all aspects are working correctly.
+Use this checklist after deploying the aymanaboghonim/DevOps Visions landing page to verify all aspects are working correctly.
 
 ## Visual Verification
 

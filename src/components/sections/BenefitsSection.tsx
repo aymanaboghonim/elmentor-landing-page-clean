@@ -17,10 +17,9 @@ const BENEFITS_DATA = [
 const BenefitsSection: React.FC = () => {
   return (
     <section id="benefits" className="benefits-section">
-      <div className="benefits-container">
-        <h2 className="benefits-title">Unlock Your Potential with DevOps Visions</h2>
+      <div className="benefits-container">        <h2 className="benefits-title">Unlock Your Potential with Elmentor Program</h2>
         <p className="benefits-subtitle">
-          Joining DevOps Visions offers a multitude of advantages designed to foster your professional and personal growth in the tech world.
+          Joining Elmentor Program offers a multitude of advantages designed to foster your professional and personal growth in the tech world.
         </p>
         
         <div className="benefits-grid">
@@ -36,16 +35,15 @@ const BenefitsSection: React.FC = () => {
         
         {/* Call to Action */}
         <div className="benefits-cta">
-          <h3 className="benefits-cta-title">Ready to Experience These Benefits?</h3>
-          <p className="benefits-cta-text">
-            Join thousands of professionals who have accelerated their careers with DevOps Visions.
+          <h3 className="benefits-cta-title">Ready to Experience These Benefits?</h3>          <p className="benefits-cta-text">
+            Join thousands of professionals who have accelerated their careers with Elmentor Program.
           </p>
           <div className="benefits-cta-buttons">
             <Button 
               variant="primary" 
               size="lg"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              ariaLabel="Start your journey with DevOps Visions"
+              ariaLabel="Start your journey with Elmentor Program"
               icon={<FaUserPlus />}
               iconPosition="right"
             >

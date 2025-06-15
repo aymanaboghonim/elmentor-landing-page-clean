@@ -59,7 +59,7 @@
 
 ✅ **Content Structure**
 - Clear section title with decorative underline
-- Concise introduction explaining the Elmentor Circles concept
+- Concise introduction explaining the aymanaboghonim Circles concept
 - Visual diagram for immediate understanding
 - Detailed list of all circle levels with descriptions
 - Closing note reinforcing the value of the model

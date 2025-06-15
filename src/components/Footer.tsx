@@ -11,11 +11,11 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         <div className="footer-content">          <div className="footer-logo-attribution">            <img 
               src={logoImage}
-              alt="El Mentor Logo" 
+              alt="Elmentor Program Logo" 
               className="footer-devops-logo" 
             />
             <p className="footer-attribution">
-              Crafted with ❤️ and code by the El Mentor Community, supercharged by GitHub Copilot. 
+              Crafted with ❤️ and code by the Elmentor Program, operated by DevOps Visions, supercharged by GitHub Copilot. 
               Empowering growth through mentorship.
             </p>
           </div>
@@ -56,8 +56,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="footer-copyright">
-          <p>&copy; {currentYear} El Mentor Community. All rights reserved.</p>
+        <div className="footer-copyright">          <p>&copy; {currentYear} Elmentor Program. All rights reserved.</p>
           <p className="footer-built-with">
             Built with React, enhanced with GitHub Copilot, and deployed with love.
           </p>

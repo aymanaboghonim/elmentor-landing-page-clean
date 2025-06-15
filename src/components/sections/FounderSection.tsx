@@ -1,13 +1,12 @@
 import React from 'react';
 import '../../styles/FounderSection.css';
-import founderImage from '../../assets/images/founder-mohamed-radwan.svg';
+import founderImage from '../../assets/images/founder/mohamed-radwan.png';
 import { FaLinkedin, FaGithub, FaBlog, FaYoutube } from 'react-icons/fa';
 import Button from '../Button';
 
 const FounderSection: React.FC = () => {
-  const founderName = "Mohamed Radwan";
-  const founderTitle = "Microsoft DevOps MVP, Founder & Executive, DevOps Visions Program (24+ years experience)";
-  const bio = "Mohamed Radwan is a Microsoft MVP with over 24 years of experience in the tech industry. He has worked with more than 60 global enterprise companies, specializing in DevOps, Azure, Agile, and GitHub. Mohamed is passionate about automation, community contributions, and is a frequent speaker at major technology conferences. He founded the DevOps Visions Program to empower tech professionals through mentorship, collaborative knowledge sharing, and cutting-edge DevOps practices.";
+  const founderName = "Mohamed Radwan";  const founderTitle = "Microsoft DevOps MVP, Founder of DevOps Visions & Elmentor Program (24+ years experience)";
+  const bio = "Mohamed Radwan is a Microsoft MVP with over 24 years of experience in the tech industry. He has worked with more than 60 global enterprise companies, specializing in DevOps, Azure, Agile, and GitHub. Mohamed is passionate about automation, community contributions, and is a frequent speaker at major technology conferences. He founded DevOps Visions, a professional services entity, and the Elmentor Program to empower tech professionals through mentorship, collaborative knowledge sharing, and cutting-edge DevOps practices.";
   
   const socialLinks = [
     { name: 'LinkedIn', icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/mohamedahmedradwan/', label: 'View LinkedIn Profile' },
@@ -22,7 +21,7 @@ const FounderSection: React.FC = () => {
         <h2 id="founder-title" className="founder-section-title">About the Founder</h2>
         <div className="founder-content-wrapper">          <div className="founder-image-container">            <img 
               src={founderImage}
-              alt={`${founderName}, Microsoft DevOps MVP and Founder of DevOps Visions Program`} 
+              alt={`${founderName}, Microsoft DevOps MVP, Founder of DevOps Visions and Elmentor Program`} 
               className="founder-image"
               loading="lazy"
               decoding="async"

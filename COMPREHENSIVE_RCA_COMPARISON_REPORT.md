@@ -28,18 +28,18 @@
 
 ### 1. Header Component Comparison
 
-#### Original (`d:\Github_personal\elmentor-landing-page\src\components\Header.jsx`)
+#### Original (`d:\Github_personal\aymanaboghonim-landing-page\src\components\Header.jsx`)
 ```jsx
 import React, { useState, useEffect } from 'react';
 import '../styles/Header.css';
-import logo from '../assets/images/elmentor-logo.png';
+import logo from '../assets/images/aymanaboghonim-logo.png';
 ```
 
 #### Current Clean (`d:\Github_personal\elmentor-landing-page-clean\src\components\Header.tsx`)
 ```tsx
 import { useState, useEffect } from 'react';
 import '../styles/Header.css';
-import logoImage from '../assets/images/elmentor-logo.png';
+import logoImage from '../assets/images/aymanaboghonim-logo.png';
 ```
 
 **Differences:**
@@ -49,7 +49,7 @@ import logoImage from '../assets/images/elmentor-logo.png';
 
 ### 2. AboutSection Component Comparison
 
-#### Original (`d:\Github_personal\elmentor-landing-page\src\sections\AboutSection.jsx`)
+#### Original (`d:\Github_personal\aymanaboghonim-landing-page\src\sections\AboutSection.jsx`)
 ```jsx
 const AboutSection = () => {
   return (
@@ -74,20 +74,20 @@ const AboutSection: React.FC = () => {
 
 ### 3. HeroSection Component Comparison
 
-#### Original (`d:\Github_personal\elmentor-landing-page\src\sections\HeroSection.jsx`)
+#### Original (`d:\Github_personal\aymanaboghonim-landing-page\src\sections\HeroSection.jsx`)
 ```jsx
 export default function HeroSection() {
   return (
-    <section className="elmentor-hero" id="hero">
-      <div className="elmentor-hero-content">
+    <section className="aymanaboghonim-hero" id="hero">
+      <div className="aymanaboghonim-hero-content">
 ```
 
 #### Current Clean (`d:\Github_personal\elmentor-landing-page-clean\src\components\sections\HeroSection.tsx`)
 ```tsx
 export default function HeroSection() {
   return (
-    <section className="elmentor-hero" id="hero">
-      <div className="elmentor-hero-content">
+    <section className="aymanaboghonim-hero" id="hero">
+      <div className="aymanaboghonim-hero-content">
 ```
 
 **Differences:**
@@ -160,9 +160,9 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 ### Images Required vs Current Status
 | Asset | Original Location | Clean Location | Status |
 |-------|-------------------|----------------|--------|
-| Elmentor Logo | `src/assets/images/elmentor-logo.png` | `src/assets/images/elmentor-logo.png` | ⚠️ **PLACEHOLDER** |
+| aymanaboghonim Logo | `src/assets/images/aymanaboghonim-logo.png` | `src/assets/images/aymanaboghonim-logo.png` | ⚠️ **PLACEHOLDER** |
 | Founder Photo | `src/assets/images/mohamed-radwan.png` | `src/assets/images/mohamed-radwan.png` | ⚠️ **PLACEHOLDER** |
-| Circles Diagram | `public/elmentor-circles.png` | `public/elmentor-circles.png` | ❌ **MISSING** |
+| Circles Diagram | `public/aymanaboghonim-circles.png` | `public/aymanaboghonim-circles.png` | ❌ **MISSING** |
 | DevOps Visions Logo | `src/assets/images/DevOps-Visions.png` | `src/assets/images/DevOps-Visions.png` | ⚠️ **PLACEHOLDER** |
 
 ---

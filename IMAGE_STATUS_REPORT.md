@@ -12,7 +12,7 @@ The following image placeholders have been updated with professional SVG alterna
 - **Used in**: FounderSection component
 
 ### 2. Circles Diagram
-- **File**: `public/elmentor-circles.png`
+- **File**: `public/aymanaboghonim-circles.png`
 - **Status**: ✅ UPDATED
 - **Type**: SVG content (with appropriate styling)
 - **Description**: Complete hierarchical visualization showing all 6 community circles (Audience → Executives)
