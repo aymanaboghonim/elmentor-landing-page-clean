@@ -1,0 +1,78 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [ master ]
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Check for merge conflicts
+        run: |
+          # Check if there would be merge conflicts with the target branch
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          
+          echo "Checking for potential merge conflicts..."
+          git checkout ${{ github.base_ref }}
+          git pull
+          
+          # Try to merge without committing
+          if git merge --no-commit --no-ff ${{ github.head_ref }}; then
+            echo "✅ No merge conflicts detected"
+            git merge --abort
+            exit 0
+          else
+            echo "⚠️ Potential merge conflicts detected!"
+            git merge --abort
+            
+            # List files that would have conflicts
+            CONFLICTS=$(git diff --name-only --diff-filter=U)
+            echo "Files with potential conflicts:"
+            echo "$CONFLICTS"
+            
+            # Don't fail the build, just warn
+            exit 0
+          fi
+      
+      - name: Validate documentation links
+        if: success() || failure()
+        run: |
+          echo "Validating documentation links..."
+          
+          # Check for broken relative links in markdown files
+          find . -name "*.md" -type f -exec grep -l "\[.*\](.*)" {} \; | while read file; do
+            echo "Checking links in $file"
+            grep -o "\[.*\](.*)" "$file" | grep -v "^http" | grep -v "^#" | while read link; do
+              # Extract the link path
+              path=$(echo "$link" | sed -n 's/.*(\(.*\))/\1/p')
+              
+              # Skip anchors and URLs
+              if [[ "$path" == \#* || "$path" == http* ]]; then
+                continue
+              fi
+              
+              # Check if the file exists
+              linkTarget=$(echo "$path" | sed 's/#.*//')
+              dir=$(dirname "$file")
+              
+              if [[ "$linkTarget" == /* ]]; then
+                # Absolute path from repo root
+                if [[ ! -e ".${linkTarget}" ]]; then
+                  echo "❌ Broken link in $file: $path"
+                fi
+              else
+                # Relative path
+                if [[ ! -e "$dir/$linkTarget" ]]; then
+                  echo "❌ Broken link in $file: $path"
+                fi
+              fi
+            done
+          done
