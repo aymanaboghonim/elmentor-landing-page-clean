@@ -7,6 +7,7 @@ Welcome to the documentation for the Elmentor Landing Page. This directory conta
 ## Documentation Structure
 
 - **[Development Guide](./development/DEVELOPMENT_GUIDE.md)**: Complete guide for developers working on this project
+- **[PR Automation Tools](./development/PR_AUTOMATION.md)**: Guide for automated PR merging and conflict prevention
 - **[Deployment Guide](./deployment/COMPREHENSIVE_GUIDE.md)**: Instructions for deploying the application
 - **[Visual Design System](./design/VISUAL_DESIGN_SYSTEM.md)**: Design specifications and guidelines
 - **[Legacy Documentation](./legacy/)**: Archive of older documentation
@@ -18,6 +19,7 @@ Welcome to the documentation for the Elmentor Landing Page. This directory conta
 - [Development Setup](./development/DEVELOPMENT_GUIDE.md#development-setup)
 - [Coding Standards](./development/DEVELOPMENT_GUIDE.md#coding-standards)
 - [Git Workflow](./development/DEVELOPMENT_GUIDE.md#git-workflow)
+- [PR Automation](./development/PR_AUTOMATION.md)
 
 ### Deployment
 - [Quick Deployment](./deployment/COMPREHENSIVE_GUIDE.md#deployment-options)
@@ -32,7 +34,7 @@ Welcome to the documentation for the Elmentor Landing Page. This directory conta
 
 ## Contributing
 
-For contribution guidelines, please see the [Contributing Guide](./CONTRIBUTING.md).
+For contribution guidelines, please see the [Contributing Guide](./development/CONTRIBUTING.md).
 
 ## Additional Resources
 
