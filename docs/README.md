@@ -2,6 +2,8 @@
 
 Welcome to the documentation for the Elmentor Landing Page. This directory contains comprehensive guides for development, deployment, and design.
 
+> **Note:** This documentation has been reorganized and consolidated for better maintainability and clarity as part of our ongoing improvements to the project structure.
+
 ## Documentation Structure
 
 - **[Development Guide](./development/DEVELOPMENT_GUIDE.md)**: Complete guide for developers working on this project
