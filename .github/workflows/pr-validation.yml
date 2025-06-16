@@ -14,6 +14,25 @@ jobs:
         with:
           fetch-depth: 0
       
+      - name: Check for prohibited branch merges
+        run: |
+          # Check if the PR is from a branch that should not be merged
+          if [ -f .github/.mergeignore ]; then
+            HEAD_BRANCH="${{ github.head_ref }}"
+            
+            while IFS= read -r branch || [[ -n "$branch" ]]; do
+              # Skip comments
+              [[ "$branch" =~ ^#.*$ ]] && continue
+              # Skip empty lines
+              [[ -z "$branch" ]] && continue
+              
+              if [[ "$HEAD_BRANCH" == "$branch" ]]; then
+                echo "⚠️ WARNING: Branch '$HEAD_BRANCH' is listed in .mergeignore file as a branch that should not be merged"
+                echo "::warning::This branch '$HEAD_BRANCH' should not be merged according to repository configuration"
+              fi
+            done < .github/.mergeignore
+          fi
+      
       - name: Check for merge conflicts
         run: |
           # Check if there would be merge conflicts with the target branch

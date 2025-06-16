@@ -2,6 +2,8 @@
 
 This document describes the deployment process for the Elmentor Landing Page Clean project and explains the different deployment scripts available.
 
+> **See Also:** For information about the branch structure and GitHub Pages setup, see the [GitHub Pages & Branching Guide](./GITHUB_PAGES_BRANCHING_GUIDE.md).
+
 ## Deployment Scripts
 
 The project includes several deployment scripts with varying levels of functionality:

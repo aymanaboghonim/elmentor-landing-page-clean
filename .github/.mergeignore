@@ -1,0 +1,5 @@
+# This file indicates which branches should not be merged into other branches
+# It helps prevent accidental merges of build output into source code
+
+# gh-pages branch contains only build output and should never be merged into source branches
+gh-pages
