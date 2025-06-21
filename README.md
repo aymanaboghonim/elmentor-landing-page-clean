@@ -4,7 +4,7 @@ A clean, maintainable landing page for the Elmentor/DevOps Visions community bui
 
 ## 📋 Quick Start
 
-`ash
+```bash
 # Install dependencies
 npm install
 
@@ -16,25 +16,25 @@ npm run build
 
 # Preview production build
 npm run serve
-`
+```
 
 ## 🚀 Deployment
 
 To deploy to GitHub Pages:
 
-1. Update your GitHub username in github-config.txt
+1. Update your GitHub username in `github-config.txt`
 2. Run the deployment script:
-   `ash
+   ```bash
    # PowerShell (recommended)
    ./deploy.ps1
    
    # Or using npm
    npm run deploy
-   `
+   ```
 
 ## 🛠️ Project Structure
 
-`
+```
 elmentor-landing-page-clean/
 ├── dist/              # Build output
 ├── docs/              # Documentation
@@ -43,8 +43,9 @@ elmentor-landing-page-clean/
 │   ├── deployment/    # Deployment scripts
 │   ├── maintenance/   # Maintenance scripts
 │   └── utils/         # Utility scripts
+├── .temp/             # Untracked local development files (not in Git)
 └── src/               # Source code
-`
+```
 
 ## 🧩 Features
 
@@ -58,13 +59,28 @@ elmentor-landing-page-clean/
 
 For repository maintenance tasks:
 
-`ash
+```bash
 ./maintain.ps1
-`
+```
+
+## 🔧 Development Utilities
+
+For local development files that shouldn\'t be committed:
+
+```bash
+# Move or copy files to untracked .temp directory
+./move-to-temp.ps1
+```
+
+The `.temp` directory is ignored by Git and provides a standardized location for:
+- Development scripts
+- Documentation drafts
+- Temporary build outputs
+- Work-in-progress files
 
 ## 📚 Documentation
 
-For detailed documentation, see the docs directory:
+For detailed documentation, see the `docs` directory:
 
 - [Deployment Guide](docs/deployment/README.md)
 - [Development Maintenance](docs/development/maintenance.md)
