@@ -2,7 +2,7 @@
 # Purpose: Builds and deploys the website to GitHub Pages
 
 # Load GitHub username from config
-$githubUsername = Get-Content -Path "github-config.txt" -Raw
+$githubUsername = Get-Content -Path "github-config.txt" -TotalCount 1
 
 # Build the site
 npm run build

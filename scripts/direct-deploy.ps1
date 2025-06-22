@@ -2,7 +2,7 @@
 # Purpose: Deploys directly to GitHub Pages without running build step (for quick fixes)
 
 # Load GitHub username from config
-$githubUsername = Get-Content -Path "github-config.txt" -Raw
+$githubUsername = Get-Content -Path "github-config.txt" -TotalCount 1
 
 # Deploy existing dist directory to GitHub Pages
 npx gh-pages -d dist -r https://github.com/$githubUsername/elmentor-landing-page-clean.git
