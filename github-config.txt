@@ -1,3 +1,3 @@
-GITHUB_USERNAME=devops-visions
+devops-visions
 # Change the username above to your actual GitHub username
-# Then run silent-deploy.bat
+# Then run ./scripts/deploy.ps1
