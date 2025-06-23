@@ -1,11 +1,11 @@
 # GitHub Pages & Branching Guide
 
-This guide explains the branch structure in this repository and how GitHub Pages deployment works.
+This guide explains the branch structure in this repository and how GitHub Pages deployment works, following DevOps Visions standards.
 
 ## Branch Structure
 
-- **`master`**: Main development branch containing the source code
-- **`gh-pages`**: Deployment branch containing the built application (generated output only)
+- **`main`**: Main development branch containing the source code, documentation, and configuration
+- **`gh-pages`**: Deployment branch containing only the built application (generated output only)
 
 ## GitHub Pages Deployment
 
@@ -13,17 +13,24 @@ This project deploys to GitHub Pages using the `gh-pages` branch, which contains
 
 ### Important Notes
 
-1. **Never merge the `gh-pages` branch into `master`**
+1. **Never merge the `gh-pages` branch into `main`**
    - The `gh-pages` branch contains only build output and should never be merged into source branches
-   - GitHub may suggest a "Compare & pull request" for `gh-pages` → `master`, but these should always be ignored
+   - GitHub may suggest a "Compare & pull request" for `gh-pages` → `main`, but these should always be ignored
 
 2. **Default Branch**
-   - The repository uses `master` as the default branch
+   - The repository uses `main` as the default branch (previously `master`)
    - Changing the default branch will not affect GitHub Pages, as it's configured to deploy from the `gh-pages` branch
 
 3. **Deployment Process**
    - The deployment process builds the application and pushes the result to the `gh-pages` branch
-   - This is handled by the scripts in the `/scripts` directory (`deploy.ps1`, `sync-gh-pages.ps1`, etc.)
+   - This is handled by the scripts in the `/scripts/deployment` directory (`deploy.ps1`, `sync-gh-pages.ps1`, etc.)
+
+4. **Standard Structure**
+   - The `gh-pages` branch should contain only:
+     - `index.html` (built version)
+     - Assets directory with compiled JS/CSS
+     - Static assets required by the website
+     - A minimal README.md explaining the branch's purpose
 
 ## Automation for Branch Protection
 

@@ -22,9 +22,12 @@ This comprehensive guide covers all aspects of deploying the Elmentor Landing Pa
 
 Use our simplified deployment batch file:
 
-```bash
-# Windows
-.\deploy.bat
+```powershell
+# PowerShell (recommended)
+./scripts/deployment/deploy.ps1
+
+# Or using batch (Windows)
+.\scripts\deployment\deploy.bat
 ```
 
 This script will:
@@ -82,8 +85,8 @@ If assets are not loading correctly:
 
 If you encounter Git "dubious ownership" errors during deployment, use:
 
-```bash
-.\scripts\fix-git-ownership.ps1
+```powershell
+./scripts/utils/fix-git-ownership.ps1
 ```
 
 ## Advanced Deployment Options

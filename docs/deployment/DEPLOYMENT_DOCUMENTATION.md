@@ -11,8 +11,8 @@ The project includes several deployment scripts with varying levels of functiona
 ### 1. Simple Deployment (Recommended)
 
 **Files:** 
-- `deploy-simple.ps1` (PowerShell)
-- `deploy-simple.bat` (Windows Batch)
+- `scripts/deployment/deploy.ps1` (PowerShell)
+- `scripts/deployment/deploy.bat` (Windows Batch)
 
 **Key Features:**
 - Simple and reliable
@@ -20,21 +20,22 @@ The project includes several deployment scripts with varying levels of functiona
 - Handles GitHub Pages deployment efficiently
 - Creates a separate deployment directory to avoid git issues
 - Supports both GitHub CLI and direct git push methods
+- Follows DevOps Visions standards
 
 **Usage:**
-```
+```powershell
 # Using PowerShell
-./deploy-simple.ps1
+./scripts/deployment/deploy.ps1
 
 # Using Command Prompt
-deploy-simple.bat
+.\scripts\deployment\deploy.bat
 ```
 
 ### 2. Clean Structure Deployment
 
 **Files:**
-- `deploy-clean.ps1` (PowerShell)
-- `deploy-clean.bat` (Windows Batch)
+- `scripts/deployment/deploy-clean.ps1` (PowerShell)
+- `scripts/deployment/deploy-clean.bat` (Windows Batch)
 
 **Key Features:**
 - Includes extensive pre-deployment checks
@@ -42,14 +43,15 @@ deploy-simple.bat
 - Provides detailed feedback during deployment
 - Performs TypeScript error checking
 - Better error handling and reporting
+- Follows DevOps Visions standards
 
 **Usage:**
-```
+```powershell
 # Using PowerShell
-./deploy-clean.ps1
+./scripts/deployment/deploy-clean.ps1
 
 # Using Command Prompt
-deploy-clean.bat
+.\scripts\deployment\deploy-clean.bat
 ```
 
 ## Deployment Process
