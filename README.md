@@ -44,8 +44,10 @@ elmentor-landing-page-clean/
 ├── dist/              # Build output
 ├── docs/              # Documentation
 │   ├── deployment/    # Deployment documentation
+│   ├── design/        # Design documents
 │   ├── development/   # Development guides
-│   └── devops-visions-guidance/  # DevOps Visions standards
+│   ├── devops-visions-guidance/  # DevOps Visions standards
+│   └── legacy/        # Legacy documentation
 ├── public/            # Static assets [DO NOT MODIFY]
 ├── scripts/           # Utility scripts
 │   ├── deployment/    # Deployment scripts [DO NOT MODIFY]
@@ -53,7 +55,8 @@ elmentor-landing-page-clean/
 │   └── utils/         # Utility scripts
 ├── .github/           # GitHub templates and workflows
 │   ├── ISSUE_TEMPLATE/ # Issue templates
-│   └── PULL_REQUEST_TEMPLATE/ # PR templates
+│   ├── PULL_REQUEST_TEMPLATE/ # PR templates
+│   └── workflows/     # GitHub Actions workflows
 ├── .temp/             # Untracked local development files (not in Git)
 └── src/               # Source code [DO NOT MODIFY]
 ```
